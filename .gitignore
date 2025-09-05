@@ -1,2 +1,6 @@
 /libs
 /bin
+
+/.vscode
+/.idea
+*.iml
