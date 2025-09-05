@@ -1,4 +1,6 @@
-#!/bin/bash -e
+#!/usr/bin/env bash
+
+set -ex
 
 # Check NDK and ANDROID_NDK_HOME env
 if [ -z "$NDK" ]; then

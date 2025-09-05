@@ -1,5 +1,6 @@
-#!/bin/bash -e
+#!/usr/bin/env bash
 
+set -ex
 
 LIBS_DIR=$(pwd)/libs
 INSTALL_DIR=$(pwd)/bin

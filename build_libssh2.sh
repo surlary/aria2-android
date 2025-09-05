@@ -1,4 +1,6 @@
-#!/bin/bash -e
+#!/usr/bin/env bash
+
+set -ex
 
 cd libssh2
 echo -e "\n\n----- Build libssh2 (`git describe --tags`) -----"

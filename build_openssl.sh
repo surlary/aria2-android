@@ -1,4 +1,6 @@
-#!/bin/bash -e
+#!/usr/bin/env bash
+
+set -ex
 
 cd openssl
 INSTALL_DIR="$1"
