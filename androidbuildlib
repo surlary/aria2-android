@@ -155,6 +155,8 @@ do
   export STRIP=$TOOLCHAIN/bin/llvm-strip
   export CHOST=$chost
 
+  export LDFLAGS="-Wl,-z,max-page-size=16384"
+
   # only confiture and make clean when there's no flag telling to ignore
   if [ "$fresh_build" == "true" ]
   then

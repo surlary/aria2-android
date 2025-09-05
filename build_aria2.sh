@@ -153,7 +153,7 @@ do
     CXXFLAGS="-Os -g" \
     CFLAGS="-Os -g" \
     CPPFLAGS="-fPIE" \
-    LDFLAGS="-fPIE -pie -L$LIBS_TARGET_DIR/lib -static-libstdc++" \
+    LDFLAGS="-fPIE -pie -L$LIBS_TARGET_DIR/lib -static-libstdc++ -Wl,-z,max-page-size=16384" \
     PKG_CONFIG_LIBDIR="$LIBS_TARGET_DIR/lib/pkgconfig" || exit
 
     

@@ -24,7 +24,7 @@ fi
 
 # Nov 10, 2021, openssl fix it. https://github.com/openssl/openssl/pull/15086
 # now we can use -latomic to fix the build error.
-LDFLAGS="-latomic"
+LDFLAGS="-latomic -Wl,-z,max-page-size=16384"
 
 echo -e "\n++ Build openssl armeabi-v7a ++"
 ./Configure no-shared android-arm -D__ANDROID_API__=21 --prefix="$INSTALL_DIR/armeabi-v7a" $LDFLAGS
