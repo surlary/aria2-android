@@ -2,8 +2,8 @@
 
 set -ex
 
-cd libssh2
-echo -e "\n\n----- Build libssh2 (`git describe --tags`) -----"
+pushd libssh2
+echo -e "\n\n----- Build libssh2 ($(git describe --tags)) -----"
 ./buildconf
 
 INSTALL_DIR="$1"
@@ -37,4 +37,4 @@ echo -e "\n++ Build libssh2 x86_64 ++"
 	configure_params="--disable-shared --enable-static --with-libssl-prefix=$INSTALL_DIR/x86_64" \
 	silent="$SILENT" custom_silent="--silent"
 
-cd ..
+popd

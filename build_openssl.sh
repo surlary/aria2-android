@@ -2,7 +2,8 @@
 
 set -ex
 
-cd openssl
+pushd openssl
+
 INSTALL_DIR="$1"
 # openssl configure script will check ANDROID_NDK_ROOT
 export ANDROID_NDK_ROOT="$NDK"
@@ -49,4 +50,4 @@ make $VERBOSE_FLAGS clean
 make -j4 $VERBOSE_FLAGS
 make install_sw
 
-cd ..
+popd

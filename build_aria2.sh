@@ -6,9 +6,8 @@ LIBS_DIR=$(pwd)/libs
 INSTALL_DIR=$(pwd)/bin
 mkdir -p $INSTALL_DIR
 
-cd aria2
+pushd aria2
 autoreconf -i
-
 
 print_help()
 {
