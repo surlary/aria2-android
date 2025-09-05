@@ -29,25 +29,25 @@ LDFLAGS="-latomic"
 echo -e "\n++ Build openssl armeabi-v7a ++"
 ./Configure no-shared android-arm -D__ANDROID_API__=21 --prefix="$INSTALL_DIR/armeabi-v7a" $LDFLAGS
 make $VERBOSE_FLAGS clean
-make -j4 $VERBOSE_FLAGS
+make "-j$(nproc)" $VERBOSE_FLAGS
 make install_sw
 
 echo -e "\n++ Build openssl arm64-v8a ++"
 ./Configure no-shared android-arm64 -D__ANDROID_API__=21 --prefix="$INSTALL_DIR/arm64-v8a" $LDFLAGS
 make $VERBOSE_FLAGS clean
-make -j4 $VERBOSE_FLAGS
+make "-j$(nproc)" $VERBOSE_FLAGS
 make install_sw
 
 echo -e "\n++ Build openssl x86 ++"
 ./Configure no-shared android-x86 -D__ANDROID_API__=21 --prefix="$INSTALL_DIR/x86" $LDFLAGS
 make $VERBOSE_FLAGS clean
-make -j4 $VERBOSE_FLAGS
+make "-j$(nproc)" $VERBOSE_FLAGS
 make install_sw
 
 echo -e "\n++ Build openssl x86_64 ++"
 ./Configure no-shared android-x86_64 -D__ANDROID_API__=21 --prefix="$INSTALL_DIR/x86_64" $LDFLAGS
 make $VERBOSE_FLAGS clean
-make -j4 $VERBOSE_FLAGS
+make "-j$(nproc)" $VERBOSE_FLAGS
 make install_sw
 
 popd

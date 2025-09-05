@@ -175,7 +175,7 @@ do
     make $VERBOSE_FLAGS clean || exit
   fi
 
-  make -j4 $VERBOSE_FLAGS || exit
+  make -j$(nproc) $VERBOSE_FLAGS || exit
   make install || exit
   echo "Done building $target"
 done
