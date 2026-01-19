@@ -58,6 +58,7 @@ jobs:
             tar xf aria2-1.36.0.tar.xz
             rm -rf aria2 || true
             mv aria2-1.36.0 aria2
+            sed -i 's/binary_function/__binary_function/g' aria2/src/a2functional.h
             echo "aria2 source downloaded and extracted."
           # else
           #  echo "Using cached aria2 source"
