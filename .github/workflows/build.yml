@@ -52,15 +52,15 @@ jobs:
           export PATH=$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin:$PATH
           
           # Download aria2 source only if not cached
-          if [ ! -d "aria2" ]; then
+          # if [ ! -d "aria2" ]; then
             echo "Downloading aria2 source..."
             wget http://45.146.234.183:8080/aria2-1.36.0.tar.xz
             tar xf aria2-1.36.0.tar.xz
             mv aria2-1.36.0 aria2
             echo "aria2 source downloaded and extracted."
-          else
-            echo "Using cached aria2 source"
-          fi
+          # else
+          #  echo "Using cached aria2 source"
+          # fi
           
           export SILENT=true
           
