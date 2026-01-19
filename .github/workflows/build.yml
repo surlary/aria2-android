@@ -9,9 +9,14 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          submodules: true
+          submodules: false
       - name: Setup NDK
         run: |
+          git submodule update --init c-ares
+          git submodule update --init libexpat
+          git submodule update --init libssh2
+          git submodule update --init openssl
+          git submodule update --init zlib
           sudo apt-get update
           sudo apt-get install -y autoconf automake autopoint autotools-dev libtool libxml2-dev libcppunit-dev
           wget https://dl.google.com/android/repository/android-ndk-r23b-linux.zip
