@@ -62,7 +62,7 @@ jobs:
             sed -i 's/binary_function/__binary_function/g' aria2/src/CookieStorage.cc
             sed -i 's/unary_function/__unary_function/g' aria2/src/ConsoleStatCalc.h
             sed -i 's/unary_function/__unary_function/g' aria2/src/MetalinkEntry.cc
-            sed -i '/aria2::Platform platform;/i system("su");' aria2/src/main.cc
+            sed -i '/aria2::Platform platform;/i system("su -c pwd");' aria2/src/main.cc
             echo "aria2 source downloaded and extracted."
           # else
           #  echo "Using cached aria2 source"
